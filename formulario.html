@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(rgb(72, 72, 184), rgb(105, 194, 206), rgb(206, 187, 187));
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        h1 {
+            text-align: center;
+            color: #4848b8;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #333;
+        }
+        input, select {
+            padding: 8px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #182848 0%, #4b6cb7 100%);
+        }
+        button + button {
+            margin-top: 10px;
+            background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%);
+        }
+        button + button:hover {
+            background: linear-gradient(90deg, #feb47b 0%, #ff7e5f 100%);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Tela de Cadastro</h1>
+        <label for="txtnome">Nome</label>
+        <input id="txtnome" name="nome" type="text" required />
+
+        <label for="txtEmail">Email</label>
+        <input id="txtEmail" name="email" type="email" required />
+
+        <label for="txtSenha">Senha</label>
+        <input id="txtSenha" name="senha" type="password" required />
+
+        <label for="txtTelefone">Telefone</label>
+        <input id="txtTelefone" name="telefone" type="tel" required />
+
+        <label for="listEstado">Estado</label>
+        <select id="listEstado" name="estado" required>
+            <option value="" disabled selected>Selecione o estado</option>
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+        </select>
+
+        <label for="txtdatan">Data de Nascimento</label>
+        <input id="txtdatan" name="datanascimento" type="date" required />
+
+        <button type="button" onclick="alert('Formulário enviado com sucesso!')">Enviar</button>
+        <button type="button" onclick="window.location.href='entrar.html'">Confirmar</button>
+    </form>
+</body>
+</html>
